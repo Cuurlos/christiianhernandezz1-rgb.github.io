@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Memes de Cuurlos</title>
+<style>
+:root{--bg:#050408;--card:#120e1c;--line:#2a2140;--p:#8b5cf6;--p2:#d946ef;--t:#f4f0fb;--m:#9a90b3;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(circle at 85% -5%,#2a1253 0,transparent 45%),var(--bg);color:var(--t);font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;min-height:100vh}
+header{padding:16px 16px 4px;max-width:900px;margin:auto}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:8px}
+h1{margin:0;font-size:clamp(32px,9vw,54px);line-height:1;font-weight:900;letter-spacing:-1px}
+h1 span{display:block;background:linear-gradient(90deg,var(--p),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--m);margin:8px 0 0;font-size:14px}
+.art{width:clamp(120px,34vw,190px);flex:none;overflow:visible}
+.bob{animation:bob 3.2s ease-in-out infinite;transform-origin:110px 110px}
+@keyframes bob{50%{transform:rotate(-4deg) translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.bob{animation:none}}
+.search,.in{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--t);font-size:16px;outline:none}
+.in{background:#0a0712;border-radius:12px;margin-bottom:12px}
+.search:focus,.in:focus{border-color:var(--p)}
+.ro{margin:10px 0 0;padding:10px 14px;border:1px dashed var(--p);border-radius:12px;color:var(--m);font-size:13px}
+.bar{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;max-width:900px;margin:auto;scrollbar-width:none}
+.bar::-webkit-scrollbar{display:none}
+.tab,.chip{flex:none;border:1px solid var(--line);background:var(--card);color:var(--t);font-weight:700;cursor:pointer;border-radius:999px}
+.tab{padding:10px 15px;font-size:15px;display:flex;align-items:center;gap:7px}
+.tab span{font-size:18px}
+.tab.on{background:linear-gradient(90deg,var(--p),var(--p2));border-color:transparent}
+.chip{padding:8px 14px;font-size:14px}
+.chip small{color:var(--m);margin-left:5px;font-weight:400}
+.chip.on{border-color:var(--p);color:#fff;background:#2a1a4d}
+.chip.add{border-style:dashed;color:var(--p)}
+.chip b{color:#ff7a90;margin-left:6px}
+.wrap{max-width:900px;margin:auto;padding:0 12px 110px}
+.grid{columns:2;column-gap:10px}
+@media(min-width:620px){.grid{columns:3}}
+.m{break-inside:avoid;margin-bottom:10px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card);cursor:pointer;position:relative}
+.m img{display:block;width:100%;height:auto}
+.m i{position:absolute;left:8px;bottom:8px;font-style:normal;font-size:12px;font-weight:700;background:rgba(5,4,8,.78);padding:3px 9px;border-radius:99px;border:1px solid var(--line)}
+.lk{position:absolute;right:8px;bottom:8px;border:1px solid var(--line);background:rgba(5,4,8,.78);color:var(--t);border-radius:99px;padding:3px 10px;font-size:13px;font-weight:700;cursor:pointer}
+.lk.on{color:#ff5fa8;border-color:#ff5fa8}
+.empty{text-align:center;color:var(--m);padding:50px 20px;border:1px dashed var(--line);border-radius:18px;margin-top:10px}
+.empty b{display:block;color:var(--t);font-size:18px;margin-bottom:6px}
+.shuf{display:block;margin:0 auto 12px;padding:10px 20px}
+.rk{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:8px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.rk em{font-style:normal;font-size:22px;width:34px;text-align:center}
+.rk div{flex:1;min-width:0}.rk b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rk small{color:var(--m)}
+.rk strong{color:#ff5fa8}
+#msgs{display:flex;flex-direction:column;gap:8px;min-height:240px;padding-bottom:10px}
+.msg{max-width:82%;padding:9px 13px;border-radius:16px;background:var(--card);border:1px solid var(--line);word-break:break-word}
+.msg small{display:block;color:var(--m);font-size:12px;margin-bottom:2px}
+.msg.me{align-self:flex-end;background:#2a1a4d;border-color:var(--p)}
+.cin{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;background:var(--bg);padding:8px 0}
+.cin .in{margin:0}.cin .btn{flex:none;padding:0 18px}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:62px;height:62px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;font-size:34px;line-height:1;box-shadow:0 8px 28px rgba(139,92,246,.55);cursor:pointer}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}
+.ov.show{display:flex}
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;width:100%;max-width:420px}
+.box h2{margin:0 0 14px;font-size:20px}
+.row{display:flex;gap:10px}
+.btn{flex:1;padding:13px;border-radius:12px;border:1px solid var(--line);background:#0a0712;color:var(--t);font-size:16px;font-weight:700;cursor:pointer}
+.btn.pri{background:linear-gradient(90deg,var(--p),var(--p2));border-color:transparent}
+.btn.del{color:#ff7a90}.btn.on{color:#ff5fa8;border-color:#ff5fa8}
+.btn:disabled{opacity:.6}
+.view{flex-direction:column;gap:12px}
+.view img{max-width:100%;max-height:68vh;border-radius:12px}
+.view .row{width:100%;max-width:420px}.view .btn{padding:12px 6px;font-size:15px}
+.note{color:var(--m);font-size:13px;margin:-4px 0 12px}
+.err{color:#ff7a90;font-size:13px;margin:-4px 0 12px}
+</style></head>
+<body>
+<header>
+<div class="hero">
+<div><h1>Memes de <span>Cuurlos</span></h1><p class="sub">Sube, vota y presume de memes.</p></div>
+<svg class="art" viewBox="0 0 220 210" aria-hidden="true">
+<defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c4a5ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+<g fill="#d946ef"><path d="M20 40l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M196 150l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+<g class="bob">
+<circle cx="110" cy="118" r="70" fill="url(#fg)" stroke="#050408" stroke-width="5"/>
+<path d="M62 100q48-26 96 0v12q-48-20-96 0z" fill="#050408"/>
+<rect x="64" y="98" width="42" height="26" rx="9" fill="#050408"/><rect x="114" y="98" width="42" height="26" rx="9" fill="#050408"/>
+<path d="M72 104l12-2M122 104l12-2" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round"/>
+<path d="M66 142q44 44 88 0z" fill="#1a0b33" stroke="#050408" stroke-width="4" stroke-linejoin="round"/>
+<path d="M76 143h68v8q-34 10-68 0z" fill="#fff"/>
+<path d="M88 168q22-14 44 0q-22 8-44 0z" fill="#d946ef"/>
+<path d="M44 128q-10 10-4 20q10-4 8-16zM176 128q10 10 4 20q-10-4-8-16z" fill="#f0abfc"/>
+</g>
+<g><path d="M118 8h84a10 10 0 0110 10v34a10 10 0 01-10 10h-52l-16 14 2-14h-18a10 10 0 01-10-10V18a10 10 0 0110-10z" fill="#d946ef" stroke="#050408" stroke-width="3"/>
+<text x="165" y="42" text-anchor="middle" font-family="Trebuchet MS,sans-serif" font-weight="900" font-size="19" fill="#fff">JAJAJA</text></g>
+</svg>
+</div>
+<div id="ro" class="ro" hidden>Solo puedes ver los memes. Pide a Cuurlos acceso de colaborador para subir, votar y chatear.</div>
+</header>
+<div style="max-width:900px;margin:8px auto;padding:0 16px">
+  <div id="authPanel" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <span id="authStatus" style="color:var(--m);font-size:13px;flex:1">Conecta tu cuenta para subir memes, votar y chatear.</span>
+    <button class="btn" id="authOpen" style="flex:none;padding:9px 12px">Entrar / Crear cuenta</button>
+    <button class="btn" id="authOut" style="display:none;flex:none;padding:9px 12px">Salir</button>
+  </div>
+</div>
+<div class="bar" id="tabs"></div>
+<div id="catrow"><div class="bar" id="chips"></div><div style="max-width:900px;margin:auto;padding:0 16px 8px"><input class="search" id="q" type="search" placeholder="Buscar meme o categoría…"></div></div>
+<div class="wrap">
+<div id="out"></div>
+<div id="chatView" hidden><div id="msgs"></div><div class="cin"><input class="in" id="ci" maxlength="300" placeholder="Escribe un mensaje…"><button class="btn pri" id="cs">Enviar</button></div></div>
+</div>
+<button class="fab" id="fab" aria-label="Añadir memes" hidden>+</button>
+
+<div class="ov" id="ovAdd"><div class="box">
+<h2>Añadir memes</h2>
+<select class="in" id="selCat"></select>
+<input class="in" id="title" placeholder="Título (opcional)">
+<input class="in" id="file" type="file" accept="image/*" multiple>
+<p class="note">Elige una o varias imágenes de tu galería.</p>
+<p class="err" id="err"></p>
+<div class="row"><button class="btn" id="cAdd">Cancelar</button><button class="btn pri" id="sAdd">Subir</button></div>
+</div></div>
+<div class="ov" id="ovCat"><div class="box">
+<h2>Nueva categoría</h2>
+<input class="in" id="catName" placeholder="Ej: Memes de Kai Cenat">
+<div class="row"><button class="btn" id="cCat">Cancelar</button><button class="btn pri" id="sCat">Crear</button></div>
+</div></div>
+<div class="ov view" id="ovView"><img id="vImg" alt="">
+<div class="row"><button class="btn" id="vClose">Cerrar</button><button class="btn" id="vLk">♥</button><button class="btn" id="vDl">Bajar</button><button class="btn del" id="vDel" hidden>Borrar</button></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://uxlimmxdldvyxtfjdvoa.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_eVw45WuN_-7VUjItJAHNnw_mr7bdEbD";
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+const $ = id => document.getElementById(id);
+const T=[["ultimos","🆕","Últimos"],["tend","🔥","Tendencias"],["top","⭐","Top"],["rand","🎲","Aleatorios"],["favs","❤️","Favoritos"],["mine","📤","Mis subidas"],["chat","💬","Chat"],["rank","🏆","Ranking"]];
+let user=null, myId=null, canWrite=false, isAdmin=false, memes=[], chat=[], cats=["GTA","Streamers","Te Forest"], cur="Todas", tab="ultimos", sel=null, ready=false, edit=false, seed=Math.random(), tok=0, likes=[];
+const cnt=new Map(), rec=new Map(), mine=new Set(), namesCache={};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const empty=(a,b)=>`<div class="empty"><b>${a}</b>${b}</div>`;
+const n=id=>cnt.get(id)||0;
+const hash=s=>{let h=2166136261;for(const c of s+seed){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0};
+const who=(id)=>id&&id===myId?"Tú":(namesCache[id]||"Usuario");
+function setStatus(text){$("authStatus").textContent=text}
+function showError(text){alert(text)}
+async function loadNames(ids){
+  const missing=[...new Set(ids.filter(id=>id&&!namesCache[id]))];
+  if(!missing.length)return;
+  const {data,error}=await db.from("profiles").select("id,name").in("id",missing);
+  if(!error)(data||[]).forEach(p=>namesCache[p.id]=p.name||"Usuario");
+}
+function list(){
+  const q=$("q").value.trim().toLowerCase();
+  let l=memes.filter(m=>(cur==="Todas"||m.cat===cur)&&(!q||(m.cat||"").toLowerCase().includes(q)||(m.title||"").toLowerCase().includes(q)));
+  if(tab==="tend")l=l.filter(m=>(rec.get(m.id)||0)>0).sort((a,b)=>(rec.get(b.id)||0)-(rec.get(a.id)||0)||n(b.id)-n(a.id));
+  else if(tab==="top")l=l.filter(m=>n(m.id)>0).sort((a,b)=>n(b.id)-n(a.id));
+  else if(tab==="rand")l=l.sort((a,b)=>hash(a.id)-hash(b.id));
+  else if(tab==="favs")l=l.filter(m=>mine.has(m.id));
+  else if(tab==="mine")l=l.filter(m=>myId&&m.by===myId);
+  return l;
+}
+const MSG={ultimos:["Aún no hay memes","Sube el primero con el botón +."],tend:["Nada en tendencia","Los memes más votados de esta semana aparecerán aquí."],top:["El top está vacío","Vota con ♥ tus memes favoritos."],rand:["Sin memes que mezclar","Sube alguno para empezar."],favs:["Aún no tienes favoritos","Toca ♥ en un meme para guardarlo aquí."],mine:["No has subido nada","Toca + para subir tus memes."]};
+function render(){
+  const meme=tab!=="chat"&&tab!=="rank";
+  $("tabs").innerHTML=T.map(([k,i,t])=>`<button class="tab ${k===tab?"on":""}" data-t="${k}"><span>${i}</span>${t}</button>`).join("");
+  $("catrow").hidden=!meme;$("chatView").hidden=tab!=="chat";$("out").hidden=tab==="chat";$("fab").hidden=!(canWrite&&meme);
+  $("chips").innerHTML=[["Todas",memes.length],...cats.map(c=>[c,memes.filter(m=>m.cat===c).length])].map(([c,k])=>`<button class="chip ${c===cur?"on":""}" data-c="${esc(c)}">${esc(c)}${edit&&c!=="Todas"&&canWrite?`<b data-del="${esc(c)}">✕</b>`:`<small>${k}</small>`}</button>`).join("")+(canWrite?`<button class="chip add" id="newCat">+ Categoría</button>`:"")+(canWrite?`<button class="chip add" id="ed">${edit?"Listo":"✎ Editar"}</button>`:"");
+  if(!ready){$("out").innerHTML=empty("Conectando con Supabase…","");return}
+  if(tab==="chat"){renderChat();return}
+  if(tab==="rank"){renderRank();return}
+  const l=list();
+  $("out").innerHTML=(tab==="rand"?`<button class="btn pri shuf" id="shuf">🔀 Mezclar otra vez</button>`:"")+(l.length?`<div class="grid">${l.map(m=>`<div class="m" data-id="${esc(m.id)}"><img loading="lazy" src="${esc(m.data)}" alt="${esc(m.title||m.cat)}"><i>${esc(m.cat)}</i><button class="lk ${mine.has(m.id)?"on":""}" data-l="${esc(m.id)}">♥ ${n(m.id)}</button></div>`).join("")}</div>`:(memes.length&&tab==="ultimos"?empty("No hay resultados","Prueba con otra búsqueda o categoría."):empty(...(MSG[tab]||MSG.ultimos))));
+}
+async function renderRank(){
+  const t=++tok,by={};
+  memes.forEach(m=>{if(!m.by)return;const o=by[m.by]||(by[m.by]={m:0,l:0});o.m++;o.l+=n(m.id)});
+  const r=Object.entries(by).sort((a,b)=>b[1].l-a[1].l||b[1].m-a[1].m).slice(0,10);
+  await loadNames(r.map(x=>x[0]));if(t!==tok)return;
+  $("out").innerHTML=r.length?r.map(([id,o],i)=>`<div class="rk"><em>${["🥇","🥈","🥉"][i]||i+1}</em><div><b>${esc(who(id))}</b><small>${o.m} meme${o.m===1?"":"s"}</small></div><strong>♥ ${o.l}</strong></div>`).join(""):empty("Ranking vacío","Sube memes y consigue ♥ para aparecer aquí.");
+}
+async function renderChat(){
+  const t=++tok;await loadNames(chat.map(c=>c.by));if(t!==tok)return;
+  const box=$("msgs"),down=box.scrollHeight-box.scrollTop<9999;
+  box.innerHTML=chat.length?chat.map(c=>`<div class="msg ${c.by&&c.by===myId?"me":""}"><small>${esc(who(c.by))}</small>${esc(c.text)}</div>`).join(""):empty("Chat vacío","Escribe el primer mensaje.");
+  document.querySelector(".cin").hidden=!canWrite;
+  if(down)window.scrollTo(0,document.body.scrollHeight);
+}
+$("tabs").onclick=e=>{const b=e.target.closest(".tab");if(!b)return;tab=b.dataset.t;if(tab==="rand")seed=Math.random();render()};
+$("chips").onclick=async e=>{
+  const d=e.target.closest("[data-del]");
+  if(d){const c=cats.find(x=>x===d.dataset.del);if(!c)return;const {data,error}=await db.from("categories").select("id").eq("name",c).maybeSingle();if(error||!data){showError("No se pudo encontrar esa categoría.");return}const r=await db.from("categories").delete().eq("id",data.id);if(r.error){showError("No se pudo borrar. Solo puedes borrar categorías creadas por tu cuenta.");return}cats=cats.filter(x=>x!==c);if(cur===c)cur="Todas";render();return}
+  if(e.target.closest("#ed")){edit=!edit;render();return}
+  const b=e.target.closest(".chip");if(!b)return;
+  if(b.id==="newCat"){$("ovCat").classList.add("show");$("catName").focus();return}
+  cur=b.dataset.c;render()
+};
+$("q").oninput=render;
+async function like(id){
+  if(!canWrite||!myId){showError("Entra en tu cuenta para votar.");return}
+  if(mine.has(id)){
+    const {error}=await db.from("likes").delete().eq("meme_id",id).eq("user_id",myId);
+    if(error){showError("No se pudo quitar el voto.");return}
+  }else{
+    const {error}=await db.from("likes").insert({meme_id:id,user_id:myId});
+    if(error&&error.code!=="23505"){showError("No se pudo guardar el voto.");return}
+  }
+  await loadLikes();render();syncV();
+}
+function syncV(){if(!sel)return;$("vLk").className="btn"+(mine.has(sel.id)?" on":"");$("vLk").textContent="♥ "+n(sel.id)}
+$("out").onclick=e=>{
+  if(e.target.closest("#shuf")){seed=Math.random();render();return}
+  const l=e.target.closest(".lk");if(l){like(l.dataset.l);return}
+  const d=e.target.closest(".m");if(!d)return;sel=memes.find(m=>m.id===d.dataset.id);if(!sel)return;
+  $("vImg").src=sel.data;$("vDel").hidden=!(canWrite&&(myId&&sel.by===myId));syncV();$("ovView").classList.add("show")
+};
+$("vClose").onclick=()=>$("ovView").classList.remove("show");
+$("vLk").onclick=()=>sel&&like(sel.id);
+$("vDel").onclick=async()=>{
+  if(!sel||!myId)return;
+  if(!confirm("¿Seguro que quieres borrar este meme?"))return;
+  const {error}=await db.from("memes").delete().eq("id",sel.id);
+  if(error){showError("No se pudo borrar el meme.");return}
+  if(sel.path)await db.storage.from("Memes").remove([sel.path]);
+  $("ovView").classList.remove("show");await loadAll()
+};
+$("vDl").onclick=()=>{if(!sel)return;const a=document.createElement("a");a.href=sel.data;a.download=(sel.title||"meme-cuurlos")+".jpg";a.click()};
+$("fab").onclick=()=>{$("selCat").innerHTML=cats.map(c=>`<option ${c===cur?"selected":""}>${esc(c)}</option>`).join("");$("file").value="";$("title").value="";$("err").textContent="";$("ovAdd").classList.add("show")};
+$("cAdd").onclick=()=>$("ovAdd").classList.remove("show");
+$("cCat").onclick=()=>$("ovCat").classList.remove("show");
+$("sCat").onclick=async()=>{
+  const v=$("catName").value.trim();if(!v){$("ovCat").classList.remove("show");return}
+  if(cats.some(c=>c.toLowerCase()===v.toLowerCase())){showError("Esa categoría ya existe.");return}
+  const {error}=await db.from("categories").insert({name:v,created_by:myId});
+  if(error){showError("No se pudo crear la categoría. Comprueba tu conexión e inténtalo de nuevo.");return}
+  cats.push(v);cur=v;$("catName").value="";$("ovCat").classList.remove("show");render()
+};
+const shrink=f=>new Promise((res,rej)=>{
+  const i=new Image(),u=URL.createObjectURL(f);
+  i.onerror=()=>{URL.revokeObjectURL(u);rej(new Error("img"))};
+  i.onload=()=>{let max=1200,q=.82,out;for(let k=0;k<7;k++){const s=Math.min(1,max/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=Math.max(1,Math.round(i.width*s));c.height=Math.max(1,Math.round(i.height*s));c.getContext("2d").drawImage(i,0,0,c.width,c.height);out=c.toDataURL("image/jpeg",q);if(out.length<300000)break;q-=.08;max*=.85}URL.revokeObjectURL(u);res(out)};
+  i.src=u
+});
+function dataUrlToBlob(dataUrl){const [meta,b64]=dataUrl.split(",");const mime=(meta.match(/:(.*?);/)||[])[1]||"image/jpeg";const bin=atob(b64);const arr=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)arr[i]=bin.charCodeAt(i);return new Blob([arr],{type:mime})}
+$("sAdd").onclick=async()=>{
+  const fs=[...$("file").files];if(!fs.length){$("err").textContent="Elige al menos una imagen.";return}
+  if(!user){$("err").textContent="Primero entra en tu cuenta.";return}
+  const b=$("sAdd");b.disabled=true;b.textContent="Subiendo…";$("err").textContent="";
+  const cat=$("selCat").value,title=$("title").value.trim();let fail=0;
+  for(const f of fs){
+    try{
+      const data=await shrink(f),blob=dataUrlToBlob(data),id=crypto.randomUUID(),path=`${user.id}/${id}.jpg`;
+      const up=await db.storage.from("Memes").upload(path,blob,{contentType:"image/jpeg",upsert:false});
+      if(up.error)throw up.error;
+      const {data:pub}=db.storage.from("Memes").getPublicUrl(path);
+      const {error}=await db.from("memes").insert({title,category:cat,image_url:pub.publicUrl,by_user:user.id});
+      if(error){await db.storage.from("Memes").remove([path]);throw error}
+    }catch(e){console.error(e);fail++}
+  }
+  b.disabled=false;b.textContent="Subir";
+  if(!fail){$("ovAdd").classList.remove("show");cur=cat;tab="ultimos";await loadAll()}
+  else $("err").textContent=`${fail} imagen(es) no se pudieron subir. Comprueba que sigues conectado y que el bucket/políticas están bien configurados.`
+};
+async function send(){
+  const v=$("ci").value.trim();if(!v||!canWrite)return;
+  if(v.length>300){showError("El mensaje no puede superar 300 caracteres.");return}
+  $("cs").disabled=true;
+  const {error}=await db.from("chat").insert({text:v,by_user:myId});
+  $("cs").disabled=false;
+  if(error){showError("No se pudo enviar el mensaje.");return}
+  $("ci").value="";await loadChat()
+}
+$("cs").onclick=send;$("ci").onkeydown=e=>{if(e.key==="Enter")send()};
+async function loadMemes(){
+  const {data,error}=await db.from("memes").select("id,title,category,image_url,by_user,created_at").order("created_at",{ascending:false}).limit(200);
+  if(error)throw error;
+  memes=(data||[]).map(m=>({id:m.id,title:m.title||"",cat:m.category||"Sin categoría",data:m.image_url,by:m.by_user,created_at:m.created_at,path:(()=>{try{const u=new URL(m.image_url);const marker="/storage/v1/object/public/Memes/";const i=u.pathname.indexOf(marker);return i>=0?decodeURIComponent(u.pathname.slice(i+marker.length)):""}catch(e){return""}})()}));
+}
+async function loadLikes(){
+  const {data,error}=await db.from("likes").select("meme_id,user_id,created_at").limit(5000);
+  if(error)throw error;
+  likes=data||[];cnt.clear();rec.clear();mine.clear();const wk=Date.now()-7*24*60*60*1000;
+  likes.forEach(x=>{cnt.set(x.meme_id,n(x.meme_id)+1);if(x.created_at&&new Date(x.created_at).getTime()>wk)rec.set(x.meme_id,(rec.get(x.meme_id)||0)+1);if(myId&&x.user_id===myId)mine.add(x.meme_id)});
+}
+async function loadChat(){
+  const {data,error}=await db.from("chat").select("id,text,by_user,created_at").order("created_at",{ascending:false}).limit(80);
+  if(error)throw error;chat=(data||[]).reverse().map(c=>({text:c.text,by:c.by_user,ts:c.created_at}));
+}
+async function loadCategories(){
+  const {data,error}=await db.from("categories").select("id,name").order("name");
+  if(error)throw error;cats=(data||[]).map(c=>c.name);
+  if(!cats.length)cats=["GTA","Streamers","Te Forest"];
+  if(!cats.includes(cur))cur="Todas";
+}
+async function loadAll(){
+  try{await Promise.all([loadMemes(),loadLikes(),loadCategories(),loadChat()]);ready=true;render();syncV()}
+  catch(e){console.error(e);ready=true;$("out").innerHTML=empty("No se pudo cargar Supabase","Revisa la URL, la clave y las políticas de lectura de las tablas.")}
+}
+function authDialog(){
+  const existing=$("authModal");if(existing){existing.classList.add("show");return}
+  const modal=document.createElement("div");modal.className="ov show";modal.id="authModal";
+  modal.innerHTML=`<div class="box"><h2>Entrar o crear cuenta</h2><input class="in" id="authEmail" type="email" autocomplete="email" placeholder="Correo electrónico"><input class="in" id="authPassword" type="password" autocomplete="current-password" placeholder="Contraseña (mínimo 6 caracteres)"><input class="in" id="authName" placeholder="Nombre para mostrar (solo al crear cuenta)"><p class="note" id="authMsg">Crea una cuenta o entra con una que ya tengas.</p><div class="row"><button class="btn" id="authCancel">Cancelar</button><button class="btn" id="authLogin">Entrar</button><button class="btn pri" id="authSignup">Crear</button></div></div>`;
+  document.body.appendChild(modal);
+  $("authCancel").onclick=()=>modal.classList.remove("show");
+  $("authLogin").onclick=async()=>{
+    const email=$("authEmail").value.trim(),password=$("authPassword").value;
+    const {error}=await db.auth.signInWithPassword({email,password});
+    $("authMsg").textContent=error?("No se pudo entrar: "+error.message):"Sesión iniciada.";
+  };
+  $("authSignup").onclick=async()=>{
+    const email=$("authEmail").value.trim(),password=$("authPassword").value,name=$("authName").value.trim()||email.split("@")[0];
+    if(password.length<6){$("authMsg").textContent="Usa una contraseña de al menos 6 caracteres.";return}
+    const {data,error}=await db.auth.signUp({email,password,options:{data:{name}}});
+    if(error){$("authMsg").textContent="No se pudo crear la cuenta: "+error.message;return}
+    if(data.user&&data.session){await db.from("profiles").upsert({id:data.user.id,name},{onConflict:"id"});$("authMsg").textContent="Cuenta creada."}
+    else $("authMsg").textContent="Cuenta iniciada en el registro. Si Supabase pide confirmar el correo, revisa tu email y después vuelve para entrar.";
+  };
+}
+$("authOpen").onclick=authDialog;
+$("authOut").onclick=async()=>{await db.auth.signOut()};
+async function updateAuth(session){
+  user=session?.user||null;myId=user?.id||null;canWrite=!!user;isAdmin=false;
+  $("authOpen").style.display=user?"none":"inline-block";$("authOut").style.display=user?"inline-block":"none";
+  $("ro").hidden=canWrite;
+  if(user){
+    const name=user.user_metadata?.name||user.email?.split("@")[0]||"Usuario";
+    setStatus("Conectado como "+name);
+    await db.from("profiles").upsert({id:user.id,name},{onConflict:"id"});
+  }else setStatus("Modo visitante: puedes ver memes. Entra para subir, votar y chatear.");
+  await loadAll();
+}
+(async()=>{
+  $("out").innerHTML=empty("Conectando con Supabase…","");
+  const {data:{session}}=await db.auth.getSession();
+  await updateAuth(session);
+  db.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>updateAuth(session),0)});
+})();
+</script>
+</body></html>
